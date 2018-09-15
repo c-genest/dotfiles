@@ -34,6 +34,8 @@ alias proxy-db-rec='servio && docker-compose up db-proxy-rec'
 alias proxy-db-preprod='servio && docker-compose up db-proxy-preprod'
 alias tunnel-pic='gcloud compute --project "partnaire-2022-dev" ssh --zone "europe-west1-b" "pic" -- -v -N -L 8080:localhost:8080'
 alias ssh-pic='gcloud compute --project "partnaire-2022-dev" ssh --zone "europe-west1-b" "pic"'
+alias backup-db-candidat='_servioBackupDB'
+alias restore-db-candidat='confirm "Le base actuelle sera écrasée, continuer ? [y/N] 😱" && _servioRestoreDB'
 
 # Kubernetes
 alias k='kubectl'
