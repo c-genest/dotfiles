@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias ls="ls -lFGh"
+alias ll="ls -lFGh"
 alias la="ls -lFGha"
 alias cat='bat'
 alias grep='grep --color=auto'
@@ -11,10 +11,12 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias dl='cd ~/Downloads'
 alias projects='cd ~/projects'
 alias dot='cd ~/projects/dotfiles'
+alias dot-apply='dot && cp .aliases .bash_profile .bash_prompt .exports .functions .gitconfig ~ && source ~/.bash_profile && cd -'
 
 alias java8='setjdk 1.8'
 alias java10='setjdk 10'
 alias gl="git lg -n 10"
+alias gc="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
 alias brew-update='brew update && brew upgrade && brew cleanup && brew doctor && terminal-notifier -title Brew -message "Upgrade finished"'
 
 # Servio
@@ -31,6 +33,7 @@ alias proxy-db-dev='servio && docker-compose up db-proxy-dev'
 alias proxy-db-rec='servio && docker-compose up db-proxy-rec'
 alias proxy-db-preprod='servio && docker-compose up db-proxy-preprod'
 alias tunnel-pic='gcloud compute --project "partnaire-2022-dev" ssh --zone "europe-west1-b" "pic" -- -v -N -L 8080:localhost:8080'
+alias ssh-pic='gcloud compute --project "partnaire-2022-dev" ssh --zone "europe-west1-b" "pic"'
 
 # Kubernetes
 alias k='kubectl'

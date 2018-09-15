@@ -17,29 +17,34 @@
 	ci = commit
 	co = checkout
 	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
-	oops = commit --amend --reuse-message=HEAD
-	pra = pull --rebase --autostash
+	lga = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all -30
+    oops = commit --amend --all --reuse-message=HEAD
+	pr = pull --rebase
+    prp = pull --rebase --prune
+    pra = pull --rebase --autostash
 	pf = push --force-with-lease
 
 [core]
 
 	pager = cat
-	editor = subl --wait
-	excludesfile = /Users/mathieu/.gitignore_global
+	editor = code --wait
+	excludesfile = /Users/cgenest/.gitignore_global
 	quotepath = false
-	autocrlf = input
-	ignorecase = true
+	autocrlf = false
 	# Make `git rebase` safer on macOS
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
+	whitespace = --trailing
 
 [push]
 
 	default = simple
+	followTags = true
 
 [rerere]
 
 	enabled = true
+	autoupdate = true
 
 [pull]
 
@@ -62,21 +67,44 @@
 
 	mnemonicPrefix = true
 	renames = true
+	wordRegex = .
+	tool = intellij
+
+[difftool "intellij"]
+
+    cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
 
 [pager]
 
-   diff = diff-so-fancy | less --tabs=1,5 -RFX
-   show = diff-so-fancy | less --tabs=1,5 -RFX
+    diff = diff-so-fancy | less --tabs=1,5 -RFX
+    show = diff-so-fancy | less --tabs=1,5 -RFX
 
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	# gpgsign = true
 
 [merge]
 
-  ff = only
+    ff = false
+    conflictStyle = diff3
+    log = true
+    tool = intellij
+
+[mergetool "intellij"]
+
+    cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+    trustExitCode = true
 
 [status]
 
-  showUntrackedFiles = all
+    showUntrackedFiles = all
+
+[log]
+
+	abbrevCommit = true
+	follow = true
+
+[grep]
+
+	extendedRegexp = true

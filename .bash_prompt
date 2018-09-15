@@ -37,20 +37,20 @@ bold=$(tput bold);
 reset=$(tput sgr0);
 # Solarized colors, taken from http://git.io/solarized-colors.
 black=$(tput setaf 0);
-blue=$(tput setaf 33);
-cyan=$(tput setaf 37);
-green=$(tput setaf 64);
-orange=$(tput setaf 166);
-purple=$(tput setaf 125);
-red=$(tput setaf 124);
-violet=$(tput setaf 61);
+blue=$(tput setaf 69);
+cyan=$(tput setaf 36);
+green=$(tput setaf 142);
+orange=$(tput setaf 208);
+purple=$(tput setaf 170);
+red=$(tput setaf 196);
+violet=$(tput setaf 62);
 white=$(tput setaf 15);
-yellow=$(tput setaf 136);
+yellow=$(tput setaf 184);
 
 PS1='\[${cyan}\]k:\[${reset}\]$(__kube_ps1)\[${green}\]';                     	# kubectl
 PS1+=' \[${cyan}\]g:\[${reset}\]$(__gcloud_ps1)\[${reset}\]';					# gcloud
-PS1+=' \[${cyan}\]\w';															# current dir
-PS1+='\[${violet}\]$(__git_ps1 " [%s]")\[${reset}\]'							# git
+PS1+=' \[${orange}\]\w';											# user:current dir
+PS1+='\[${cyan}\]$(__git_ps1)\[${reset}\]'							# git
 PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;

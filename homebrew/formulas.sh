@@ -10,7 +10,6 @@ brew install imagemagick
 brew install maven
 brew install the_silver_searcher
 brew install wget
-brew install youtube-dl
 brew install nvm
 brew install ansible
 brew install bash-completion

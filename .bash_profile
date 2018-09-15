@@ -1,6 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -35,5 +38,5 @@ source /usr/local/opt/git/etc/bash_completion.d/git-prompt.sh
 source /usr/local/opt/nvm/nvm.sh
 
 # GCloud utility
-source '${HOME}/bin/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-source '${HOME}/bin/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+source "${HOME}/bin/google-cloud-sdk/path.bash.inc"
+source "${HOME}/bin/google-cloud-sdk/completion.bash.inc"
