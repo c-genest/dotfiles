@@ -1,8 +1,8 @@
 [user]
 
-	email = mathieu.bigorne@gmail.com
-	name = Mathieu Bigorne
-	signingkey = 86EEAF88413D29A8
+	email = chris.genest@gmail.com
+	name = Chris GENEST
+	signingkey = BAEA4A6368C32535
 
 [color]
 
@@ -31,7 +31,7 @@
 	ignorecase = true
 	# Make `git rebase` safer on macOS
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-	trustctime = false	
+	trustctime = false
 
 [push]
 
@@ -57,12 +57,6 @@
 	frag = magenta bold # line info
 	old = red # deletions
 	new = green # additions
-
-[color "status"]
-
-	added = yellow
-	changed = green
-	untracked = cyan
 
 [diff]
 
