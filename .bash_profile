@@ -35,5 +35,5 @@ source /usr/local/opt/git/etc/bash_completion.d/git-prompt.sh
 source /usr/local/opt/nvm/nvm.sh
 
 # GCloud utility
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+source '${HOME}/bin/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+source '${HOME}/bin/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
