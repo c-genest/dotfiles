@@ -75,7 +75,7 @@ function _servioBackupDB() {
 
 function _servioRestoreDB() {
   servio
-  backup_to_restore=$(ls -r postgres/backups | _inline_fzf | awk '{print $9}')
+  backup_to_restore=$(ls -lt postgres/backups | _inline_fzf | awk '{print $9}')
   [ "$backup_to_restore" == "" ] && echo "Abort restore" && return
   docker-compose rm --force --stop db
   rm -fr postgres/db-candidat/*
@@ -84,3 +84,12 @@ function _servioRestoreDB() {
   docker-compose up -d db
   cd -
 }
+
+function _servioDestroyDB() {
+  servio
+  docker-compose rm --force --stop db
+  rm -fr postgres/db-candidat/*
+  docker-compose up -d db
+  cd -
+}
+

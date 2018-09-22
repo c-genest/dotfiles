@@ -36,6 +36,7 @@ alias tunnel-pic='gcloud compute --project "partnaire-2022-dev" ssh --zone "euro
 alias ssh-pic='gcloud compute --project "partnaire-2022-dev" ssh --zone "europe-west1-b" "pic"'
 alias backup-db-candidat='_servioBackupDB'
 alias restore-db-candidat='confirm "Le base actuelle sera écrasée, continuer ? [y/N] 😱" && _servioRestoreDB'
+alias destroy-db-candidat='confirm "Le base actuelle sera supprimée, continuer ? [y/N] 😱" && _servioDestroyDB'
 
 # Kubernetes
 alias k='kubectl'
