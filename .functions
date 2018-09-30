@@ -75,8 +75,9 @@ function _servioBackupDB() {
 
 function _servioRestoreDB() {
   servio
-  backup_to_restore=$(ls -lt postgres/backups | _inline_fzf | awk '{print $9}')
+  backup_to_restore=$(ls -lth postgres/backups | _inline_fzf | awk '{print $9}')
   [ "$backup_to_restore" == "" ] && echo "Abort restore" && return
+
   docker-compose rm --force --stop db
   rm -fr postgres/db-candidat/*
   echo "Restoring $backup_to_restore"
