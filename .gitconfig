@@ -38,7 +38,7 @@
 
 [push]
 
-	default = simple
+	default = current
 	followTags = true
 
 [rerere]
@@ -48,6 +48,7 @@
 
 [pull]
 
+    default = current
     rebase = preserve
 
 [color "branch"]
