@@ -51,6 +51,10 @@
     default = current
     rebase = preserve
 
+[rebase]
+
+	autosquash = true
+
 [color "branch"]
 
 	current = cyan
