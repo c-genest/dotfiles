@@ -94,3 +94,6 @@ function _servioDestroyDB() {
   cd -
 }
 
+portkill() {
+    lsof -ti:$1 | xargs kill
+}
