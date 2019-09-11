@@ -11,7 +11,7 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias dl='cd ~/Downloads'
 alias projects='cd ~/projects'
 alias dot='cd ~/projects/dotfiles'
-alias dot-apply-servio="[ -f ${SERVIO_LOCATION}/outils/dotfiles/.servio.sh ] && servio && source outils/dotfiles/.servio.sh && cd -"
+alias dot-apply-servio="[ -f ${SERVIO_LOCATION}/tools/dotfiles/.servio.sh ] && servio && source tools/dotfiles/.servio.sh && cd -"
 alias dot-apply='dot-apply-servio && dot && cp .aliases .bash_profile .bash_prompt .exports .functions .gitconfig ~ && source ~/.bash_profile && cd -'
 
 alias java8='setjdk 1.8'
