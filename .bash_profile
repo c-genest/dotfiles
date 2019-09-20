@@ -42,6 +42,6 @@ source "${HOME}/bin/google-cloud-sdk/path.bash.inc"
 source "${HOME}/bin/google-cloud-sdk/completion.bash.inc"
 
 # default java version
-setjdk 1.8
+setjdk 11
 
 source "${SERVIO_LOCATION}/tools/dotfiles/.servio.sh"
