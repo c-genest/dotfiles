@@ -30,6 +30,20 @@ __gcloud_ps1()
     fi
 }
 
+__terraform_ps1()
+{
+    terraform_selected_workspace=$SERVIO_LOCATION/tools/terraform/.terraform/environment
+    CONTEXT=$([ -f "$terraform_selected_workspace" ] && cat $terraform_selected_workspace || echo "???")
+
+    if [ -n "$CONTEXT" ]; then
+        if [ "$CONTEXT" = "prod" ]; then
+            echo -e "${red}${CONTEXT}${reset} 😱"
+        else
+            echo -e "${yellow}${CONTEXT}${reset}"
+        fi
+    fi
+}
+
 export GIT_PS1_SHOWDIRTYSTATE=1 GIT_PS1_SHOWSTASHSTATE=1 GIT_PS1_SHOWUNTRACKEDFILES=1
 
 tput sgr0; # reset colors
@@ -47,8 +61,9 @@ violet=$(tput setaf 62);
 white=$(tput setaf 15);
 yellow=$(tput setaf 184);
 
-PS1='\[${cyan}\]k:\[${reset}\]$(__kube_ps1)\[${green}\]';                     	# kubectl
-PS1+=' \[${cyan}\]g:\[${reset}\]$(__gcloud_ps1)\[${reset}\]';					# gcloud
+PS1='\[${cyan}\]k:\[${reset}\]$(__kube_ps1)\[${green}\]';           # kubectl
+PS1+=' \[${cyan}\]g:\[${reset}\]$(__gcloud_ps1)\[${reset}\]';       # gcloud
+PS1+=' \[${cyan}\]t:\[${reset}\]$(__terraform_ps1)\[${reset}\]';    # terraform
 PS1+=' \[${orange}\]\w';											# user:current dir
 PS1+='\[${cyan}\]$(__git_ps1)\[${reset}\]'							# git
 PS1+="\n";
