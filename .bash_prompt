@@ -32,8 +32,7 @@ __gcloud_ps1()
 
 __terraform_ps1()
 {
-    terraform_selected_workspace=$SERVIO_LOCATION/tools/terraform/.terraform/environment
-    CONTEXT=$([ -f "$terraform_selected_workspace" ] && cat $terraform_selected_workspace || echo "???")
+    CONTEXT=$(cd $SERVIO_LOCATION/tools/terraform/ && terraform workspace show)
 
     if [ -n "$CONTEXT" ]; then
         if [ "$CONTEXT" = "prod" ]; then
