@@ -8,19 +8,20 @@ brew tap homebrew/cask
 brew tap homebrew/cask-versions
 brew tap AdoptOpenJDK/openjdk
 
-brew cask install adoptopenjdk11
-brew cask install google-cloud-sdk
-brew cask install firefox
-brew cask install google-chrome
-brew cask install slack
-brew cask install alfred
-brew cask install docker
-brew cask install intellij-idea
-brew cask install iterm2
-brew cask install rectangle
-brew cask install microsoft-remote-desktop-beta
-brew cask install keystore-explorer
-brew cask install ngrok
+brew install --cask adoptopenjdk11
+brew install --cask google-cloud-sdk
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask slack
+brew install --cask alfred
+brew install --cask docker
+brew install --cask visual-studio-code
+brew install --cask intellij-idea
+brew install --cask iterm2
+brew install --cask rectangle
+brew install --cask microsoft-remote-desktop
+brew install --cask keystore-explorer
+brew install --cask ngrok
 
 brew install git
 brew install git-crypt
