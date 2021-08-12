@@ -29,3 +29,4 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # SERVIO
 export USERNAME="cgenest"
 export SERVIO_LOCATION="/Users/${USERNAME}/projects/servio"
+export COMMANDEXECUTOR_ENABLED=false # Disable JobEx jobs
