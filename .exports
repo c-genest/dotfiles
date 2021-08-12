@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Remove Mac shell warning to force use Zsh
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Make VS Code the default editor.
 export EDITOR='code';
 
