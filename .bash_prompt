@@ -6,7 +6,7 @@ export TERM='xterm-256color';
 
 __kube_ps1()
 {
-    CONTEXT=$(cat ~/.kube/config | grep "current-context:" --color=NO | sed "s/current-context: //")
+    CONTEXT=$([ -f ~/.kube/config ] && cat ~/.kube/config | grep "current-context:" --color=NO | sed "s/current-context: //")
 
     if [ -n "$CONTEXT" ]; then
         if [ "$CONTEXT" = "prod" ]; then
@@ -19,7 +19,7 @@ __kube_ps1()
 
 __gcloud_ps1()
 {
-    CONTEXT=$(cat ~/.config/gcloud/active_config)
+    CONTEXT=$([ -f ~/.config/gcloud/active_config ] && cat ~/.config/gcloud/active_config)
 
     if [ -n "$CONTEXT" ]; then
         if [ "$CONTEXT" = "prod" ]; then
@@ -32,7 +32,7 @@ __gcloud_ps1()
 
 __terraform_ps1()
 {
-    CONTEXT=$(cd $SERVIO_LOCATION/tools/terraform/ && terraform workspace show)
+    CONTEXT=$([ -d $SERVIO_LOCATION/tools/terraform ] && cd $SERVIO_LOCATION/tools/terraform/ && terraform workspace show)
 
     if [ -n "$CONTEXT" ]; then
         if [ "$CONTEXT" = "prod" ]; then

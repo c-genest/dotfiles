@@ -1,3 +1,6 @@
+# Add brew to the PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
@@ -27,21 +30,17 @@ shopt -s cdspell;
 # fzf : command line fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-
 [ -f "${HOME}/.iterm2_shell_integration.bash" ] && source "${HOME}/.iterm2_shell_integration.bash"
 
-# Git
-source /usr/local/opt/git/etc/bash_completion.d/git-completion.bash
-source /usr/local/opt/git/etc/bash_completion.d/git-prompt.sh
-
 # Node version manager
-source /usr/local/opt/nvm/nvm.sh
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # GCloud utility
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+[ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+[ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/completion.bash.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
 
 # default java version
 setjdk 11
 
-source "${SERVIO_LOCATION}/tools/dotfiles/.servio.sh"
+[ -s "${SERVIO_LOCATION}/tools/dotfiles/.servio.sh" ] && source "${SERVIO_LOCATION}/tools/dotfiles/.servio.sh"
