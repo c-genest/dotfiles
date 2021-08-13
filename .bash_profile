@@ -1,5 +1,5 @@
 # Add brew to the PATH
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[ -f "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
@@ -38,7 +38,13 @@ shopt -s cdspell;
 
 # GCloud utility
 [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
-[ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/completion.bash.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+[ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+
+## Keep compatibility with older installation (no brew installation)
+[ -f "${HOME}/bin/google-cloud-sdk/path.bash.inc" ] && source "${HOME}/bin/google-cloud-sdk/path.bash.inc"
+[ -f "${HOME}/bin/google-cloud-sdk/completion.bash.inc" ] && source "${HOME}/bin/google-cloud-sdk/completion.bash.inc"
+
+
 
 # default java version
 setjdk 11
