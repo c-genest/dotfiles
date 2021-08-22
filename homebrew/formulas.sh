@@ -10,6 +10,7 @@ brew tap AdoptOpenJDK/openjdk
 
 brew install --cask adoptopenjdk11
 brew install --cask google-cloud-sdk
+brew install --cask dropbox
 brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask slack
