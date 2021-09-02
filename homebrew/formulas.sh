@@ -21,6 +21,7 @@ brew install --cask intellij-idea
 brew install --cask iterm2
 brew install --cask rectangle
 brew install --cask microsoft-remote-desktop
+brew install --cask kap
 brew install --cask keystore-explorer
 brew install --cask ngrok
 
