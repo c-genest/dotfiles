@@ -58,3 +58,4 @@ brew install redis
 brew install bash
 brew install postgresql
 brew install kotlin
+brew install dive
