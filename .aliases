@@ -18,7 +18,7 @@ alias java8='setjdk 1.8'
 alias java10='setjdk 10'
 alias gl="git lg -n 10"
 alias gc="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
-alias brew-update='brew update && brew upgrade && brew cleanup && brew doctor && terminal-notifier -title Brew -message "Upgrade finished"'
+alias brew-update='brew update && brew upgrade --greedy && brew cleanup && brew doctor && terminal-notifier -title Brew -message "Upgrade finished"'
 
 # Servio
 alias logs-service-candidat='stern service-candidat --timestamps --tail 1000'
