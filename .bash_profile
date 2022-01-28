@@ -33,8 +33,9 @@ shopt -s cdspell;
 [ -f "${HOME}/.iterm2_shell_integration.bash" ] && source "${HOME}/.iterm2_shell_integration.bash"
 
 # Node version manager
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export VOLTA_HOME=$HOME/.volta
+export PATH="$VOLTA_HOME/bin:$PATH"
+[ -s "$(brew --prefix)/opt/volta/etc/bash_completion.d/volta" ] && source "$(brew --prefix)/opt/volta/etc/bash_completion.d/volta"  # This loads volta bash_completion
 
 # GCloud utility
 [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
