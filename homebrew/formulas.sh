@@ -6,7 +6,6 @@ brew upgrade
 
 brew tap homebrew/cask
 brew tap homebrew/cask-versions
-brew tap AdoptOpenJDK/openjdk
 
 brew install --cask adoptopenjdk11
 brew install --cask google-cloud-sdk
@@ -24,6 +23,7 @@ brew install --cask microsoft-remote-desktop
 brew install --cask kap
 brew install --cask keystore-explorer
 brew install --cask ngrok
+brew install --cask zulu
 
 brew install git
 brew install git-crypt
