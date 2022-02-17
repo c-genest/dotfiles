@@ -30,7 +30,7 @@ brew install git-crypt
 brew install maven
 brew install the_silver_searcher
 brew install wget
-brew install volta
+brew install pnpm
 brew install ansible
 brew install bash-completion
 brew install jq
