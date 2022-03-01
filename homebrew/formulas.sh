@@ -24,6 +24,7 @@ brew install --cask kap
 brew install --cask keystore-explorer
 brew install --cask ngrok
 brew install --cask zulu
+brew install --cask android-file-transfer
 
 brew install git
 brew install git-crypt
