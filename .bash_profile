@@ -43,6 +43,6 @@ shopt -s cdspell;
 
 
 # default java version
-setjdk 11
+setjdk 17
 
 [ -s "${SERVIO_LOCATION}/tools/dotfiles/.servio.sh" ] && source "${SERVIO_LOCATION}/tools/dotfiles/.servio.sh"
