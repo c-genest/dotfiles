@@ -34,3 +34,4 @@ export USERNAME="cgenest"
 export SERVIO_LOCATION="/Users/${USERNAME}/projects/servio"
 export SERVIO_ANNOUNCEMENTS_LOCATION="${SERVIO_LOCATION}-announcements"
 export COMMANDEXECUTOR_ENABLED=false # Disable JobEx jobs
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True # Nécessaire à partir de GKE 1.22 (pourra être supprimé en 1.25)
