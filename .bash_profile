@@ -36,11 +36,12 @@ shopt -s cdspell;
 [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
 [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ] && source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
 
+## Ruby versions manager (asdf)
+[ -f "$(brew --prefix)/opt/asdf/libexec/asdf.sh" ] && source "$(brew --prefix)/opt/asdf/libexec/asdf.sh"
+
 ## Keep compatibility with older installation (no brew installation)
 [ -f "${HOME}/bin/google-cloud-sdk/path.bash.inc" ] && source "${HOME}/bin/google-cloud-sdk/path.bash.inc"
 [ -f "${HOME}/bin/google-cloud-sdk/completion.bash.inc" ] && source "${HOME}/bin/google-cloud-sdk/completion.bash.inc"
-
-
 
 # default java version
 setjdk 17

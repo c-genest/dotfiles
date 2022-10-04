@@ -50,7 +50,7 @@ brew install fd
 brew install coreutils
 brew install telnet
 brew install stern
-brew install rbenv
+brew install asdf
 brew install helm
 brew install terraform
 brew install terraformer
