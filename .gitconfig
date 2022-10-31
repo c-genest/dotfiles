@@ -53,6 +53,7 @@
 [rebase]
 
 	autosquash = true
+	update-refs = true
 
 [color "branch"]
 
