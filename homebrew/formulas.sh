@@ -61,3 +61,4 @@ brew install bash
 brew install postgresql
 brew install kotlin
 brew install dive
+brew install python
