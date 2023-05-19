@@ -35,3 +35,7 @@ export SERVIO_LOCATION="/Users/${USERNAME}/projects/servio"
 export SERVIO_ANNOUNCEMENTS_LOCATION="${SERVIO_LOCATION}-announcements"
 export COMMANDEXECUTOR_ENABLED=false # Disable JobEx jobs
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True # Nécessaire à partir de GKE 1.22 (pourra être supprimé en 1.25)
+
+# Android Studio
+export ANDROID_HOME=/Users/cgenest/Library/Android/sdk
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin"

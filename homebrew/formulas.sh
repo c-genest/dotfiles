@@ -26,6 +26,7 @@ brew install --cask ngrok
 brew install --cask zulu
 brew install --cask android-file-transfer
 brew install --cask postman
+brew install --cask android-studio
 
 brew install git
 brew install git-crypt
