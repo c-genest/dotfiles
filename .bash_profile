@@ -44,6 +44,6 @@ shopt -s cdspell;
 [ -f "${HOME}/bin/google-cloud-sdk/completion.bash.inc" ] && source "${HOME}/bin/google-cloud-sdk/completion.bash.inc"
 
 # default java version
-setjdk 17
+setjdk 21
 
 [ -s "${SERVIO_LOCATION}/tools/dotfiles/.servio.sh" ] && source "${SERVIO_LOCATION}/tools/dotfiles/.servio.sh"
