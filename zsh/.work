@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+export SERVIO_LOCATION=~/projects/servio
+export SERVIO_ANNOUNCEMENTS_LOCATION=~/projects/servio-announcements
+export USERNAME=cgenest
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True # voir https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+
+source ${SERVIO_LOCATION}/tools/dotfiles/.servio.sh
+
+alias logs-service-candidat='stern service-candidat --timestamps --tail 1000'
+alias logs-service-authentification='stern service-authentification --timestamps --tail 1000'
+alias logs-all='stern ".*" --timestamps --tail 1000'
+alias servio-kubernetes='cd $SERVIO_LOCATION/kubernetes'
+alias servio-terraform='cd $SERVIO_LOCATION/tools/terraform'

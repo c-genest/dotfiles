@@ -14,8 +14,6 @@ alias dot='cd ~/projects/dotfiles'
 alias dot-apply-servio="[ -f ${SERVIO_LOCATION}/tools/dotfiles/.servio.sh ] && servio && source tools/dotfiles/.servio.sh && cd -"
 alias dot-apply='dot-apply-servio && dot && cp .aliases .bash_profile .bash_prompt .exports .functions .gitconfig ~ && source ~/.bash_profile && cd -'
 
-alias java8='setjdk 1.8'
-alias java10='setjdk 10'
 alias gl="git lg -n 10"
 alias gc="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
 alias glb="git branch --sort=-committerdate | grep -v '*' | head | _servio_inline_fzf_nh | xargs git checkout"
@@ -23,7 +21,7 @@ alias brew-update='brew update && brew upgrade --greedy && brew cleanup && brew 
 
 # Servio
 alias logs-service-candidat='stern service-candidat --timestamps --tail 1000'
-alias logs-ingress='stern nginx-ingress --timestamps --tail 1000'
+alias logs-service-authentification='stern service-authentification --timestamps --tail 1000'
 alias logs-all='stern ".*" --timestamps --tail 1000'
 
 # Kubernetes

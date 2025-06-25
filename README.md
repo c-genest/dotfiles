@@ -45,13 +45,9 @@ cd dotfiles
 # Installation des Apps
 ./homebrew/formulas.sh
 
-# Configuration du Bash
-cp .aliases .bash_profile .bash_prompt .exports .functions .gitconfig ~ && source ~/.bash_profile
+# Configuration de Zsh
+cp zsh/.zshrc zsh/.aliases zsh/.functions zsh/.work zsh/.p10k.zsh .gitconfig ~ && source ~/.zshrc
 ```
-
-# Customize iTerm2
-
-Préferences (`⌘,`) → `Profiles` → `Other Actions...` → `Import JSON Profiles...`, puis importer le fichier `~/projects/dotfiles/init/cgenest-iTerm2-Default-profile.json`.
 
 # Setup fzf
 ```shell
@@ -67,4 +63,18 @@ rbenv install 2.6.8
 # Node
 ```shell
 nvm install node
+```
+
+# iterm2
+
+Préferences (`⌘,`) → `Profiles` → `Other Actions...` → `Import JSON Profiles...`, puis importer le fichier `~/projects/dotfiles/init/cgenest-iTerm2-Default-profile.json`.
+
+```shell
+curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
+```
+
+## Installer la font MeslogLGS dans iterm2
+
+```
+https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf
 ```
